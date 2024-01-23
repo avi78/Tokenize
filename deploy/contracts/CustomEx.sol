@@ -69,4 +69,49 @@ contract CustomDex {
         history.outputValue = outputValue;
     }
 
+    function swapEthToToken(string memory tokenName) public payable returns (uint256) {
+        uint256 inputValue = msg.value;
+        uint256 outputValue = (inputValue/ethValue) * 10 ** 18; //convert to 18 decimal points
+        require(tokenInstanceMap[tokenName].transfer(msg.sender, outputValue));
+
+        string memory etherToken = "Ether";
+
+        _transactionHistory(tokenName, etherToken, inputValue, outputValue);
+        return outputValue;
+    }
+
+    function swapTokenToEth(string memory tokenName, uint256 _amount) public returns (uint256){
+        //convert the token amount(ether value)to exact amount(10)
+        uint256 exactAmount = _amount /10 ** 18;
+        uint256 ethToBeTransferred = exactAmount * ethValue;
+        require(address(this).balance => ethToBeTransferred, "Dex is running low on balance");
+
+        payable(msg.sender).transfer(ethToBeTransferred);
+        require(tokenInstanceMap[tokenName].transferFrom(msg.sender, address(this), _amount));
+
+         string memory etherToken = "Ether";
+
+         _transactionHistory(tokenName, etherToken, exactAmount, ethToBeTransferred);
+        return ethToBeTransferred;
+    }
+
+    function swapTokenToToken(string memory srcTokenName, string memory destTokenName. uint256 _amount) public {
+        require(tokenInstanceMap[srcTokenName].transferFrom(msg.sender, address(this), _amount));
+        require(tokenInstanceMap[destTokenName].transferFrom(msg.sender,_amount));
+
+        _transactionHistory(srcTokenName, destTokenName, _amount, _amount);
+    }
+
+    function getAllHistory() public view returns (History[] memory) {
+        uint256 itemCount = _historyIndex;
+        uint256 currentIndex = 0;
+
+        History[] memory items = new History[](itemCount);
+
+        for(uint256 i = 0; i<itemCount; i++) {
+            uint256 currentId = i+1;
+            History storage currentItem 
+        }
+    }
+
 }
