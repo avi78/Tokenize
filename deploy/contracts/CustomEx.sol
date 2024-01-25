@@ -110,8 +110,10 @@ contract CustomDex {
 
         for(uint256 i = 0; i<itemCount; i++) {
             uint256 currentId = i+1;
-            History storage currentItem 
+            History storage currentItem = historys[currentId];
+            items[currentIndex] = currentItem;
+            currentIndex += 1;
         }
+        return items;
     }
-
 }
