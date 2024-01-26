@@ -56,9 +56,9 @@ contract CustomDex {
         return address(this).balance;
     }
 
-    function _transactionHistory(string memory tokenName, string mamory etherToken, uint256 inputValue, uint256 outputValue) internal {
+    function _transactionHistory(string memory tokenName, string memory etherToken, uint256 inputValue, uint256 outputValue) internal {
         _historyIndex++;
-        uint256 _historyId = _historyId;
+        uint256 _historyId = _historyIndex;
         History storage history = historys[_historyId];
 
         history.historyId = _historyId;
@@ -84,7 +84,7 @@ contract CustomDex {
         //convert the token amount(ether value)to exact amount(10)
         uint256 exactAmount = _amount /10 ** 18;
         uint256 ethToBeTransferred = exactAmount * ethValue;
-        require(address(this).balance => ethToBeTransferred, "Dex is running low on balance");
+        require(address(this).balance >= ethToBeTransferred, "Dex is running low on balance.");
 
         payable(msg.sender).transfer(ethToBeTransferred);
         require(tokenInstanceMap[tokenName].transferFrom(msg.sender, address(this), _amount));
@@ -95,9 +95,9 @@ contract CustomDex {
         return ethToBeTransferred;
     }
 
-    function swapTokenToToken(string memory srcTokenName, string memory destTokenName. uint256 _amount) public {
+    function swapTokenToToken(string memory srcTokenName, string memory destTokenName, uint256 _amount) public {
         require(tokenInstanceMap[srcTokenName].transferFrom(msg.sender, address(this), _amount));
-        require(tokenInstanceMap[destTokenName].transferFrom(msg.sender,_amount));
+        require(tokenInstanceMap[destTokenName].transfer(msg.sender,_amount));
 
         _transactionHistory(srcTokenName, destTokenName, _amount, _amount);
     }
