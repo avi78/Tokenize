@@ -11,12 +11,12 @@ import {
 } from "@rainbow-me/rainbowkit";
 
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-import { infuraProvider } from "wagmi/provider/infura";
+import { infuraProvider } from "wagmi/providers/infura";
 
 const { chains, provider } = configureChains(
   [chain.polygonMumbai],
   [
-    infraProvider({
+    infuraProvider({
       apikey: "f0267a8d7d5642caa8735db53507eefd",
       priority: 1,
     }),
@@ -34,10 +34,10 @@ const wagmiClient = createClient({
   provider,
 });
 
-const myTheme = merge(midnigthTheme(), {
+const myTheme = merge(midnightTheme(), {
   colors: {
     accentColor: "#18181b",
-    accentColoForeground: "#fff",
+    accentColorForeground: "#fff",
   },
 });
 

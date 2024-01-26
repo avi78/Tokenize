@@ -11,7 +11,7 @@ const home = () => {
       <Card />
       <Footer />
     </div>
-  )
+  );
 };
 
 export default home;
