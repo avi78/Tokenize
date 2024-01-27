@@ -1,6 +1,6 @@
 import {BigNumber, ethers} from "ethers";
 import {Contract, contract, tokenContract} from "./contract";
-import {toEth, toWei} from "./utils";
+import {toEth} from "./utils";
 
 export async function swapEthToToken(tokenName, amount) {
     try {
