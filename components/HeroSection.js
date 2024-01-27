@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
   <section className="bg-[#1A1A1A] text-gray-100">
     <div classsName="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-      <div className="flex flex-col justify-center p-6 text-center rounded-smlg:max-w-lg lg:text-left">
+      <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-lg lg:text-left">
         <h1 className="text-5xl font-bold leadi sm:text-6xl">
           Token
           {""} <span className="text-[#7765F3]">Marketplace</span>
@@ -28,7 +28,7 @@ const HeroSection = () => {
           <a
             rel="noopener noreferrer"
             href="#"
-            className="px-8 py-3 text-lg font-semibold rounded border-gray-100"
+            className="px-8 py-3 text-lg font-semibold border rounded border-gray-100"
           >
             Swap ERC20
           </a>
