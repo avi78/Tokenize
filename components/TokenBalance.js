@@ -18,11 +18,11 @@ const TokenBalance = ({ name, walletAddress }) => {
 
   const [balance, setBalance ] = useState("-");
   const [tokenAddress, setTokenAddress] = useState();
-  const [copyIcon, setCopyIcon] = useState( {icon: ClipboardIcon});
+  const [copyIcon, setCopyIcon] = useState({icon: ClipboardIcon});
   const [txPending, setTxPending] = useState(false);
 
   const notifyError = (msg) => toast.error(msg, { duration: 6000 });
-  const notifySuccess = () => toast.success("Transation completed.");
+  const notifySuccess = () => toast.success("Transaction completed.");
 
   useEffect(() => {
     if(name && walletAddress) {
