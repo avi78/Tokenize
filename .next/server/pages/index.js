@@ -51,9 +51,10 @@ const Footer = ()=>{
 /***/ }),
 
 /***/ 673:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -61,15 +62,134 @@ const Footer = ()=>{
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _rainbow_me_rainbowkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(921);
+/* harmony import */ var wagmi__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(906);
+/* harmony import */ var wagmi__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(wagmi__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_hot_toast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(201);
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(959);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_rainbow_me_rainbowkit__WEBPACK_IMPORTED_MODULE_2__, react_hot_toast__WEBPACK_IMPORTED_MODULE_4__, _index__WEBPACK_IMPORTED_MODULE_5__]);
+([_rainbow_me_rainbowkit__WEBPACK_IMPORTED_MODULE_2__, react_hot_toast__WEBPACK_IMPORTED_MODULE_4__, _index__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
+
+
+
+
+//Internal import
 
 const Header = ()=>{
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        children: "Header"
+    const { 0: tokenBalComp , 1: setTokenBalComp  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();
+    const { address  } = (0,wagmi__WEBPACK_IMPORTED_MODULE_3__.useAccount)();
+    const notifyConnectWallet = ()=>react_hot_toast__WEBPACK_IMPORTED_MODULE_4__["default"].error("Connect wallet.", {
+            duration: 2000
+        });
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
+        setTokenBalComp(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+            children: [
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .TokenBalance */ .F5, {
+                    name: "USD Coin",
+                    walletAddress: address
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .TokenBalance */ .F5, {
+                    name: "BNB",
+                    walletAddress: address
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .TokenBalance */ .F5, {
+                    name: "SHIBA INU",
+                    walletAddress: address
+                })
+            ]
+        }));
+        if (!address) notifyConnectWallet();
+    }, [
+        address
+    ]);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("header", {
+        className: "p-4 text-gray-100",
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "container flex justify-between h-16 mx-auto",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "flex",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                rel: "noopener noreferrer",
+                                href: "#",
+                                "aria-label": "Back to homepage",
+                                className: "flex items-center p-2",
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .Logo */ .TR, {})
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                                className: "items-stretch hidden space-x-3 lg:flex",
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                        className: "flex",
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                            rel: "noopener noreferrer",
+                                            href: "/",
+                                            className: "flex items-center px-4 -mb-1 dark:border-transparent text-[#7765f3] border-[#7765F#]",
+                                            children: "Swap"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                        className: "flex",
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                            rel: "noopener noreferrer",
+                                            href: "/tokens",
+                                            className: "flex items-center px-4 -mb-1 dark:border-transparent",
+                                            children: "Tokens"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                        className: "flex",
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                            rel: "noopener noreferrer",
+                                            href: "#",
+                                            className: "flex items-center px-4 -mb-1 dark:border-transparent",
+                                            children: "NFTs"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                        className: "flex",
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                                            rel: "noopener noreferrer",
+                                            href: "#",
+                                            className: "flex items-center px-4 -mb-1 dark:border-transparent",
+                                            children: "Pool"
+                                        })
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "items-center flex-shrink-0 hidden lg:flex",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .TokenBalance */ .F5, {
+                                name: "USD Coin",
+                                walletAddress: address
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .TokenBalance */ .F5, {
+                                name: "SHIBA INU",
+                                walletAddress: address
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_rainbow_me_rainbowkit__WEBPACK_IMPORTED_MODULE_2__.ConnectButton, {})
+                        ]
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                        className: "p-4 lg:hidden",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .Menu */ .v2, {})
+                    })
+                ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_hot_toast__WEBPACK_IMPORTED_MODULE_4__.Toaster, {})
+        ]
     });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
 
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -149,9 +269,12 @@ const Insta = ()=>{
 /***/ }),
 
 /***/ 601:
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
@@ -159,30 +282,33 @@ const Insta = ()=>{
 
 
 const Logo = ()=>{
-    return /*#__PURE__*/ _jsxs("svg", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         fill: "currentColor",
         viewBox: "0 0 32 32",
         className: "w-8 h-8 text-[#7765F3]",
         children: [
-            /*#__PURE__*/ _jsx("path", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                 d: "M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z"
             }),
-            /*#__PURE__*/ _jsx("path", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                 d: "M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z"
             })
         ]
     });
 };
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (Logo)));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Logo);
 
 
 /***/ }),
 
 /***/ 562:
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
@@ -190,13 +316,13 @@ const Logo = ()=>{
 
 
 const Menu = ()=>{
-    return /*#__PURE__*/ _jsx("svg", {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         fill: "none",
         viewBox: "0 0 24 24",
         stroke: "currentColor",
         className: "w-6 h-6 dark:text-gray-100",
-        children: /*#__PURE__*/ _jsx("path", {
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
             strokeLinecap: "round",
             strokeLinejoin: "round",
             strokeWidth: "2",
@@ -204,7 +330,7 @@ const Menu = ()=>{
         })
     });
 };
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (Menu)));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Menu);
 
 
 /***/ }),
@@ -315,10 +441,13 @@ const Table = ()=>{
 /***/ }),
 
 /***/ 347:
-/***/ ((module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
@@ -347,17 +476,17 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([reac
 
 
 const TokenBalance = ({ name , walletAddress  })=>{
-    const { 0: balnce , 1: setBalance  } = useState("-");
-    const { 0: tokenAddress , 1: setTokenAddress  } = useState();
-    const { 0: copyIcon , 1: setCopyIcon  } = useState({
-        icon: ClipboardIcon
+    const { 0: balance , 1: setBalance  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("-");
+    const { 0: tokenAddress , 1: setTokenAddress  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)();
+    const { 0: copyIcon , 1: setCopyIcon  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
+        icon: _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_4__.ClipboardIcon
     });
-    const { 0: txPending , 1: setTcPending  } = useState(false);
-    const notifyError = (msg)=>toast.error(msg, {
+    const { 0: txPending , 1: setTxPending  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    const notifyError = (msg)=>react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].error(msg, {
             duration: 6000
         });
-    const notifySuccess = ()=>toast.success("Transation completed.");
-    useEffect(()=>{
+    const notifySuccess = ()=>react_hot_toast__WEBPACK_IMPORTED_MODULE_3__["default"].success("Transation completed.");
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         if (name && walletAddress) {
             fetchTokenBalance();
             fetchTokenAddress();
@@ -367,51 +496,51 @@ const TokenBalance = ({ name , walletAddress  })=>{
         walletAddress
     ]);
     async function fetchTokenBalance() {
-        const bal = await getTokenBalance(name, walletAddress);
+        const bal = await (0,_utils_context__WEBPACK_IMPORTED_MODULE_6__.getTokenBalance)(name, walletAddress);
         console.log(bal);
-        const fBal = ethers.utils.formatUnits(bal.toString(), 18);
+        const fBal = ethers__WEBPACK_IMPORTED_MODULE_2__.ethers.utils.formatUnits(bal.toString(), 18);
         setBalance(fBal.toString());
     }
     ;
     async function fetchTokenAddress() {
-        const address = await getTokenAddress(name);
+        const address = await (0,_utils_context__WEBPACK_IMPORTED_MODULE_6__.getTokenAddress)(name);
         setTokenAddress(address);
     }
-    return /*#__PURE__*/ _jsxs("div", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: "flex mx-2 border-[1px] rounded-l rounded-r-lg border-[#7765F3]",
         children: [
-            /*#__PURE__*/ _jsxs("div", {
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: "flex items-center bg-zinc-900 text-zinc-300 w-fit p-2 px-3 rounded-l-lg",
                 children: [
-                    /*#__PURE__*/ _jsx("p", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                         className: "text-sm",
                         children: name
                     }),
-                    /*#__PURE__*/ _jsx("p", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                         className: "bg-zinc-800 p-0.5 px-3 ml-3 rounded-lg text-zinc-100",
                         children: balance
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsx("div", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "flex items-center p-2 px-2 bg-[#7765F3] rounded-r-lg",
-                children: /*#__PURE__*/ _jsx(copyIcon.icon, {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(copyIcon.icon, {
                     className: "h-6 cursor-pointer",
                     onClick: ()=>{
                         navigator.clipboard.writeText(tokenAddress);
                         setCopyIcon({
-                            icon: ClipboardCheckIcon
+                            icon: _heroicons_react_outline__WEBPACK_IMPORTED_MODULE_4__.ClipboardCheckIcon
                         });
                     }
                 })
             }),
-            txPending && /*#__PURE__*/ _jsx(TransactionStatus, {}),
-            /*#__PURE__*/ _jsx(Toaster, {})
+            txPending && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_index__WEBPACK_IMPORTED_MODULE_5__/* .TransactionStatus */ .LN, {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_hot_toast__WEBPACK_IMPORTED_MODULE_3__.Toaster, {})
         ]
     });
 // return <div>TokenBalance</div>;
 };
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (TokenBalance)));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TokenBalance);
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
@@ -433,8 +562,12 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$_": () => (/* reexport safe */ _Footer__WEBPACK_IMPORTED_MODULE_1__.Z),
 /* harmony export */   "DH": () => (/* reexport safe */ _HeroSection__WEBPACK_IMPORTED_MODULE_3__.Z),
+/* harmony export */   "F5": () => (/* reexport safe */ _TokenBalance__WEBPACK_IMPORTED_MODULE_8__.Z),
+/* harmony export */   "LN": () => (/* reexport default from dynamic */ _TransactionStatus__WEBPACK_IMPORTED_MODULE_9___default.a),
+/* harmony export */   "TR": () => (/* reexport safe */ _SVG_Logo__WEBPACK_IMPORTED_MODULE_11__.Z),
 /* harmony export */   "Zb": () => (/* reexport safe */ _Card__WEBPACK_IMPORTED_MODULE_2__.Z),
-/* harmony export */   "h4": () => (/* reexport safe */ _Header__WEBPACK_IMPORTED_MODULE_0__.Z)
+/* harmony export */   "h4": () => (/* reexport safe */ _Header__WEBPACK_IMPORTED_MODULE_0__.Z),
+/* harmony export */   "v2": () => (/* reexport safe */ _SVG_Menu__WEBPACK_IMPORTED_MODULE_10__.Z)
 /* harmony export */ });
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(673);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(193);
@@ -452,8 +585,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _SVG_Facebook__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(285);
 /* harmony import */ var _SVG_Insta__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(960);
 /* harmony import */ var _SVG_Twitter__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(61);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_TokenBalance__WEBPACK_IMPORTED_MODULE_8__]);
-_TokenBalance__WEBPACK_IMPORTED_MODULE_8__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Header__WEBPACK_IMPORTED_MODULE_0__, _TokenBalance__WEBPACK_IMPORTED_MODULE_8__]);
+([_Header__WEBPACK_IMPORTED_MODULE_0__, _TokenBalance__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -559,6 +692,22 @@ module.exports = require("react");
 
 "use strict";
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 906:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("wagmi");
+
+/***/ }),
+
+/***/ 921:
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("@rainbow-me/rainbowkit");;
 
 /***/ }),
 

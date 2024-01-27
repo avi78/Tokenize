@@ -13,15 +13,13 @@ import {
 import { TransactionStatus } from "./index";
 
 import { getTokenAddress, getTokenBalance, increaseAllowance,} from "../utils/context";
-import { addRequestMeta } from "next/dist/server/request-meta";
-import { Divider } from "@nextui-org/react";
 
 const TokenBalance = ({ name, walletAddress }) => {
 
-  const [balnce, setBalance ] = useState("-");
+  const [balance, setBalance ] = useState("-");
   const [tokenAddress, setTokenAddress] = useState();
   const [copyIcon, setCopyIcon] = useState( {icon: ClipboardIcon});
-  const [txPending, setTcPending] = useState(false);
+  const [txPending, setTxPending] = useState(false);
 
   const notifyError = (msg) => toast.error(msg, { duration: 6000 });
   const notifySuccess = () => toast.success("Transation completed.");
