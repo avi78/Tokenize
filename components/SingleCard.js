@@ -18,7 +18,7 @@ const SingleCard = ({ index, name, walletAddress }) => {
   const [balance, setbalance] = useState("-");
   const [tokenAddress, setTokenAddress] = useState();
 
-  const [copyIcon, setCopyIcon] = usestate({ icon: ClipboardIcon });
+  const [copyIcon, setCopyIcon] = useState({ icon: ClipboardIcon });
 
   const [txPending, setTxPending] = useState(false);
 
