@@ -15,7 +15,7 @@ import{
 } from "@heroicons/react/outline";
 
 const SingleCard = ({ index, name, walletAddress }) => {
-  const [balance, setbalance] = useState("-");
+  const [balance, setBalance] = useState("-");
   const [tokenAddress, setTokenAddress] = useState();
 
   const [copyIcon, setCopyIcon] = useState({ icon: ClipboardIcon });
@@ -29,7 +29,7 @@ const SingleCard = ({ index, name, walletAddress }) => {
     if (name && walletAddress) {
       fetchTokenBalance();
       fetchTokenAddress();    
-      } else setbalance("-");
+      } else setBalance("-");
   }, [name, walletAddress]);
 
   async function fetchTokenBalance() {
