@@ -18,7 +18,7 @@ const Footer = () => {
             <Logo />
           </div>
         <span className="self-center text-2xl font-semibold text-gray-50">
-          Crpti Swap
+          Crypti Swap
         </span>
        </a>
      </div>
@@ -35,7 +35,6 @@ const Footer = () => {
         ))}
        </ul>
       </div>
-    </div>
     <div className="space-y-3">
       <h3 className="tracki uppercase text-[#7765F3]">Company</h3>
       <ul className="space-y-1 text-gray-50">
@@ -89,6 +88,7 @@ const Footer = () => {
           </a>
           </div>
         </div>
+      </div>
       </div>
     <div className="py-8 text-sm text-center border-[#7765F3] boder-t-[3px] text-gray-400">
       2024 @teamCblockchain Akanksha Kashyap, Akruti Sarangi, Ananya G Gauda, Ananya K A.
