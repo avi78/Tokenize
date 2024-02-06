@@ -70,10 +70,10 @@ const Header = () => {
             <li className="flex">
               <a 
                 rel="noopener noreferrer"
-                href="#"
+                href="/LiveTracker"
                 className="flex items-center px-4 -mb-1 dark:border-transparent"
               >
-                Live Tracker
+                LiveTracker
               </a>              
             </li>
           </ul>

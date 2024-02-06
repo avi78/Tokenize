@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/NFTs": "pages/NFTs.js"
+  "/": "pages/index.js",
+  "/tokens": "pages/tokens.js"
 }
