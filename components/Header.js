@@ -61,7 +61,7 @@ const Header = () => {
             <li className="flex">
               <a 
                 rel="noopener noreferrer"
-                href="#"
+                href="/NFTs"
                 className="flex items-center px-4 -mb-1 dark:border-transparent"
               >
                 NFTs
@@ -73,7 +73,7 @@ const Header = () => {
                 href="#"
                 className="flex items-center px-4 -mb-1 dark:border-transparent"
               >
-                Pool
+                Live Tracker
               </a>              
             </li>
           </ul>
