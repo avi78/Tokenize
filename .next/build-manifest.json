@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/w0_3x-IO64-YO-A0z11N2/_buildManifest.js",
-    "static/w0_3x-IO64-YO-A0z11N2/_ssgManifest.js"
+    "static/ynvju2Zn4PL5dKvSi4aGq/_buildManifest.js",
+    "static/ynvju2Zn4PL5dKvSi4aGq/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -23,9 +23,9 @@
       "static/chunks/framework-47eb1420121fdf53.js",
       "static/chunks/main-f8b777cc49ae9b3d.js",
       "static/chunks/799-cbc27d495d1644d2.js",
-      "static/chunks/646-0eae11da87efa45e.js",
+      "static/chunks/953-58795b95004b7d6c.js",
       "static/chunks/828-cf68db927a9825d2.js",
-      "static/chunks/pages/LiveTracker-409e16a224f32c32.js"
+      "static/chunks/pages/LiveTracker-70851c1f4a75f87e.js"
     ],
     "/NFTs": [
       "static/chunks/webpack-4e20db0f1541628b.js",
