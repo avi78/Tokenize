@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f2202522-b543-41b1-a20b-b07ae934e42f/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/tokenize-swap",
+    "appService.deploySubpath": "build"
+}
