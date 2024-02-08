@@ -1,7 +1,10 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
+  "/LiveTracker": "pages/LiveTracker.html",
+  "/": "pages/index.html",
+  "/tokens": "pages/tokens.html",
+  "/NFTs": "pages/NFTs.html",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/tokens": "pages/tokens.js"
+  "/404": "pages/404.html"
 }
